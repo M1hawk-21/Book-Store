@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Online Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for styling */
+        .team-member {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .testimonial {
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #e5e5e5;
+        }
+
+        /* Adjust spacing */
+        section {
+            margin-bottom: 30px;
+        }
+
+        /* Modern styling for testimonials */
+        .testimonial p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .testimonial p.text-end {
+            text-align: right;
+        }
+
+        /* Responsive team member cards */
+        .team-member {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Stylish headings */
+        h1, h2, h3 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Home Page Link -->
+            <a class="navbar-brand" href="index.html">Bookstore</a>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-nav flex-row mx-auto">
+                <!-- About Page Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <!-- Book Catalog Page Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="catalog.html">Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <form id="searchForm" class="compact-search">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="titleInput" name="titleInput" placeholder="Title">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="authorInput" name="authorInput" placeholder="Author">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <select class="form-select" id="genreSelect" name="genreSelect">
+                                        <option value="" selected>Genre</option>
+                                        <option value="fiction">Fiction</option>
+                                        <option value="nonfiction">Non-Fiction</option>
+                                        <option value="mystery">Mystery</option>
+                                        <!-- Add more genre options as needed -->
+                                    </select>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </ul>  
+                </li>
+            </ul>
+        </div>
+    </nav> 
+
+    <div class="container mt-4">
+        <h1>About Us</h1>
+        <p>Welcome to our Online Bookstore! We are passionate about books and reading.</p>
+
+        <section>
+            <h2>Our Story</h2>
+            <p>Our journey began with a love for literature. We started as a small, local bookstore in the heart of the city, dedicated to bringing the joy of reading to our community. Over the years, our love for books and our customers' support have allowed us to grow into the online bookstore you see today.</p>
+        </section>
+
+        <section>
+            <h2>Our Mission</h2>
+            <p>Our mission is to inspire a reading culture and connect readers with their next favorite book. We believe that books have the power to educate, entertain, and enlighten. That's why we curate a wide range of genres, from classics to contemporary fiction, non-fiction, and everything in between.</p>
+        </section>
+
+        <section>
+            <h2>Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <h3>John Doe</h3>
+                        <p>Co-founder and CEO</p>
+                        <p>John is a dedicated book enthusiast with a vision to make quality literature accessible to all.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <h3>Jane Smith</h3>
+                        <p>Chief Curator</p>
+                        <p>Jane is our book expert who carefully selects each book in our collection.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <h3>David Lee</h3>
+                        <p>Customer Support</p>
+                        <p>David is here to assist you in finding the perfect book and ensuring your satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"I love shopping at this bookstore. They have an incredible selection, and the staff is always helpful!"</p>
+                <p class="text-end">- Sarah Johnson</p>
+            </div>
+            <div class="testimonial">
+                <p>"This is my go-to place for books. The online shopping experience is seamless, and the delivery is fast!"</p>
+                <p class="text-end">- Michael Brown</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Include jQuery and other scripts -->
+</body>
+
+</html>
+

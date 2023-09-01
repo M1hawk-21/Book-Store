@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalog - Online Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Home Page Link -->
+            <a class="navbar-brand" href="index.html">Bookstore</a>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-nav flex-row mx-auto">
+                <!-- About Page Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <!-- Book Catalog Page Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="catalog.html">Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <form id="searchForm" class="compact-search">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="titleInput" name="titleInput" placeholder="Title">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="authorInput" name="authorInput" placeholder="Author">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <select class="form-select" id="genreSelect" name="genreSelect">
+                                        <option value="" selected>Genre</option>
+                                        <option value="fiction">Fiction</option>
+                                        <option value="nonfiction">Non-Fiction</option>
+                                        <option value="mystery">Mystery</option>
+                                        <!-- Add more genre options as needed -->
+                                    </select>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </ul>  
+                </li>
+            </ul>
+        </div>
+    </nav> 
+
+    <div class="container mt-4">
+        <h1>Book Catalog</h1>
+        <p>Explore our collection of books:</p>
+
+        <!-- Bootstrap List Group for Books -->
+        <ul class="list-group">
+            <!-- Book 1 -->
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- Book Image (You can replace this with actual book images) -->
+                        <img src="book1.jpg" alt="Book 1" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                        <!-- Book Title -->
+                        <h4>Book Title 1</h4>
+                        <!-- Author -->
+                        <p><strong>Author:</strong> Author Name 1</p>
+                        <!-- Summary -->
+                        <p><strong>Summary:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id
+                            ex quis quam maximus bibendum.</p>
+                        <!-- Description -->
+                        <p><strong>Description:</strong> A detailed description of the book goes here.</p>
+                    </div>
+                </div>
+            </li>
+            <!-- Book 2 -->
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- Book Image (You can replace this with actual book images) -->
+                        <img src="book2.jpg" alt="Book 2" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                        <!-- Book Title -->
+                        <h4>Book Title 2</h4>
+                        <!-- Author -->
+                        <p><strong>Author:</strong> Author Name 2</p>
+                        <!-- Summary -->
+                        <p><strong>Summary:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id
+                            ex quis quam maximus bibendum.</p>
+                        <!-- Description -->
+                        <p><strong>Description:</strong> A detailed description of the book goes here.</p>
+                    </div>
+                </div>
+            </li>
+            <!-- Add more books here -->
+        </ul>
+    </div>
+
+    <!-- Include jQuery and other scripts -->
+</body>
+
+</html>

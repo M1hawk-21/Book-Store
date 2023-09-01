@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Online Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Home Page Link -->
+            <a class="navbar-brand" href="index.html">Bookstore</a>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-nav flex-row mx-auto">
+                <!-- About Page Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <!-- Book Catalog Page Link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="catalog.html">Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <form id="searchForm" class="compact-search">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="titleInput" name="titleInput"
+                                        placeholder="Title">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="authorInput" name="authorInput"
+                                        placeholder="Author">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group mb-3">
+                                    <select class="form-select" id="genreSelect" name="genreSelect">
+                                        <option value="" selected>Genre</option>
+                                        <option value="fiction">Fiction</option>
+                                        <option value="nonfiction">Non-Fiction</option>
+                                        <option value="mystery">Mystery</option>
+                                        <!-- Add more genre options as needed -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </form>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <div class="container mt-4">
+        <h1>Contact Us</h1>
+        <p>Have a question? Reach out to us!</p>
+
+        <h2>Send us a Query</h2>
+        <form id="queryForm" onsubmit="return validateForm()">
+            <!-- Name -->
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="nameInput" name="nameInput" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="emailInput" name="emailInput" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-3">
+                <label for="phoneInput" class="form-label">Phone:</label>
+                <input type="tel" class="form-control" id="phoneInput" name="phoneInput" pattern="[0-9]{10,}" required>
+            </div>
+
+            <!-- Query -->
+            <div class="mb-3">
+                <label for="queryInput" class="form-label">Query:</label>
+                <textarea class="form-control" id="queryInput" name="queryInput" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="container mt-4">
+        <h1>Contact Us</h1>
+        <p>Have a question? Reach out to us!</p>
+
+        <!-- Contact Information List -->
+        <h2>Contact Information</h2>
+        <ul class="list-group-item">
+            <!-- Contact Information Section 1 -->
+            <li class="list-group-item">Address: 123 Book Street, Booktown</li>
+            <li class="list-group-item">Phone: 123-456-7890</li>
+            <li class="list-group-item">Email: info@bookstore.com</li>
+        </ul>
+        <ul class="list-group-item">
+
+            <!-- Contact Information Section 2 -->
+            <li class="list-group-item">Address: 456 Library Avenue, Readingville</li>
+            <li class="list-group-item">Phone: 555-123-4567</li>
+            <li class="list-group-item">Email: contact@readingvillebooks.com</li>
+        </ul>
+        <ul class="list-group-item">
+            <!-- Contact Information Section 3 -->
+            <li class="list-group-item">Address: 789 Novel Road, Storyville</li>
+            <li class="list-group-item">Phone: 987-654-3210</li>
+            <li class="list-group-item">Email: support@storyvillebookshop.com</li>
+        </ul>
+    </div>
+
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("nameInput").value;
+            const email = document.getElementById("emailInput").value;
+            const phone = document.getElementById("phoneInput").value;
+            const query = document.getElementById("queryInput").value;
+
+            // Simple validation checks
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (!isValidEmail(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!isValidPhone(phone)) {
+                alert("Please enter a valid phone number (at least 10 digits).");
+                return false;
+            }
+
+            if (query.trim() === "") {
+                alert("Please enter your query.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function isValidEmail(email) {
+            // Basic email format validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function isValidPhone(phone) {
+            // Basic phone number format validation (at least 10 digits)
+            const phoneRegex = /^\d{10,}$/;
+            return phoneRegex.test(phone);
+        }
+    </script>
+
+    <!-- Include Bootstrap and other scripts -->
+</body>
+
+</html>
